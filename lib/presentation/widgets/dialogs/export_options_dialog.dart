@@ -171,8 +171,7 @@ class _ExportOptionsDialogState extends State<ExportOptionsDialog> {
                   }
                 });
               },
-              activeTrackColor: AppColors.primaryAccent.withValues(alpha: 0.5),
-              activeThumbColor: AppColors.primaryAccent,
+              activeTrackColor: AppColors.primaryAccent.withOpacity(0.5),
             ),
           ],
         ),
@@ -233,7 +232,7 @@ class _ExportOptionsDialogState extends State<ExportOptionsDialog> {
           ),
           borderRadius: BorderRadius.circular(8),
           color: date != null
-              ? AppColors.primaryAccent.withValues(alpha: 0.1)
+              ? AppColors.primaryAccent.withOpacity( 0.1)
               : null,
         ),
         child: Row(
@@ -340,7 +339,7 @@ class _ExportOptionsDialogState extends State<ExportOptionsDialog> {
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.15),
+                  color: color.withOpacity( 0.15),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(icon, color: color, size: 24),
@@ -388,7 +387,7 @@ class _ExportOptionsDialogState extends State<ExportOptionsDialog> {
     return ElevatedButton(
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
-        backgroundColor: color.withValues(alpha: 0.2),
+        backgroundColor: color.withOpacity( 0.2),
         foregroundColor: color,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         shape: RoundedRectangleBorder(

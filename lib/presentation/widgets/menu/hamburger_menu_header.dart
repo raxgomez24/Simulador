@@ -32,7 +32,7 @@ class HamburgerMenuHeader extends ConsumerWidget {
         ),
         border: Border(
           bottom: BorderSide(
-            color: AppColors.borderLight.withValues(alpha: 0.3),
+            color: AppColors.borderLight.withOpacity(0.3),
             width: 1,
           ),
         ),
@@ -57,7 +57,7 @@ class HamburgerMenuHeader extends ConsumerWidget {
                   borderRadius: BorderRadius.circular(16),
                   boxShadow: [
                     BoxShadow(
-                      color: AppColors.primaryAccent.withValues(alpha: 0.3),
+                      color: AppColors.primaryAccent.withOpacity(0.3),
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -96,7 +96,7 @@ class HamburgerMenuHeader extends ConsumerWidget {
                         vertical: 4,
                       ),
                       decoration: BoxDecoration(
-                        color: _getRoleColor(user.perfil).withValues(alpha: 0.2),
+                        color: _getRoleColor(user.perfil).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
@@ -130,7 +130,7 @@ class HamburgerMenuHeader extends ConsumerWidget {
                 Container(
                   padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                    color: AppColors.success.withValues(alpha: 0.2),
+                    color: AppColors.success.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Icon(

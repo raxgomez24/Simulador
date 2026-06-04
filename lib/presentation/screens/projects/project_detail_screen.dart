@@ -276,7 +276,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
                 colors: [
                   Colors.transparent,
                   Colors.transparent,
-                  AppColors.primaryBackground.withValues(alpha: 0.9),
+                  AppColors.primaryBackground.withOpacity(0.9),
                   AppColors.primaryBackground,
                 ],
                 stops: const [0.0, 0.4, 0.7, 1.0],
@@ -297,7 +297,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
           end: Alignment.bottomRight,
           colors: [
             baseColor,
-            baseColor.withValues(alpha: 0.6),
+            baseColor.withOpacity(0.6),
           ],
         ),
       ),
@@ -305,7 +305,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
         child: Icon(
           Icons.business,
           size: 80,
-          color: Colors.white.withValues(alpha: 0.8),
+          color: Colors.white.withOpacity(0.8),
         ),
       ),
     );
@@ -319,10 +319,10 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
           decoration: BoxDecoration(
-            color: _parseColor(project.temaColor ?? '#00D4AA').withValues(alpha: 0.15),
+            color: _parseColor(project.temaColor ?? '#00D4AA').withOpacity(0.15),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: _parseColor(project.temaColor ?? '#00D4AA').withValues(alpha: 0.3),
+              color: _parseColor(project.temaColor ?? '#00D4AA').withOpacity(0.3),
             ),
           ),
           child: Row(
@@ -360,8 +360,8 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
             color: project.activo
-                ? AppColors.success.withValues(alpha: 0.2)
-                : AppColors.textSecondary.withValues(alpha: 0.2),
+                ? AppColors.success.withOpacity(0.2)
+                : AppColors.textSecondary.withOpacity(0.2),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Text(
@@ -467,7 +467,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
                   children: [
                     CircleAvatar(
                       radius: 28,
-                      backgroundColor: _parseColor(project.temaColor ?? '#00D4AA').withValues(alpha: 0.2),
+                      backgroundColor: _parseColor(project.temaColor ?? '#00D4AA').withOpacity(0.2),
                       child: Text(
                         participant['name']!.substring(0, 1).toUpperCase(),
                         style: TextStyle(
@@ -644,13 +644,13 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.primaryAccent.withValues(alpha: 0.1),
-            AppColors.secondaryAccent.withValues(alpha: 0.1),
+            AppColors.primaryAccent.withOpacity(0.1),
+            AppColors.secondaryAccent.withOpacity(0.1),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: AppColors.primaryAccent.withValues(alpha: 0.3),
+          color: AppColors.primaryAccent.withOpacity(0.3),
         ),
       ),
       child: Form(
@@ -663,7 +663,7 @@ class _ProjectDetailScreenState extends ConsumerState<ProjectDetailScreen> {
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: blockedColor?.withValues(alpha: 0.1) ?? AppColors.tertiaryBackground,
+                  color: blockedColor?.withOpacity(0.1) ?? AppColors.tertiaryBackground,
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: blockedColor ?? AppColors.borderLight,

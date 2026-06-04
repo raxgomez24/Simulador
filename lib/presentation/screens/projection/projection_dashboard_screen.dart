@@ -328,7 +328,7 @@ class _ProjectionDashboardScreenState
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
         decoration: BoxDecoration(
           color: isSelected
-              ? AppColors.primaryAccent.withValues(alpha: 0.1)
+              ? AppColors.primaryAccent.withOpacity(0.1)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
@@ -518,13 +518,13 @@ class _ProjectionDashboardScreenState
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                   colors: [
-                    AppColors.primaryAccent.withValues(alpha: 0.1),
-                    AppColors.secondaryAccent.withValues(alpha: 0.1),
+                    AppColors.primaryAccent.withOpacity(0.1),
+                    AppColors.secondaryAccent.withOpacity(0.1),
                   ],
                 ),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: AppColors.primaryAccent.withValues(alpha: 0.3),
+                  color: AppColors.primaryAccent.withOpacity(0.3),
                 ),
               ),
               child: Row(
@@ -565,10 +565,10 @@ class _ProjectionDashboardScreenState
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               decoration: BoxDecoration(
-                color: _getSessionStatusColor(session.estado).withValues(alpha: 0.1),
+                color: _getSessionStatusColor(session.estado).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: _getSessionStatusColor(session.estado).withValues(alpha: 0.5),
+                  color: _getSessionStatusColor(session.estado).withOpacity(0.5),
                 ),
               ),
               child: Row(
@@ -682,7 +682,7 @@ class _ProjectionDashboardScreenState
                 width: 40,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.1),
+                  color: color.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Icon(icon, color: color, size: 20),
@@ -691,7 +691,7 @@ class _ProjectionDashboardScreenState
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: AppColors.success.withValues(alpha: 0.1),
+                  color: AppColors.success.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
@@ -1028,7 +1028,7 @@ class _ProjectionDashboardScreenState
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: AppColors.primaryAccent.withValues(alpha: 0.1),
+                  color: AppColors.primaryAccent.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(

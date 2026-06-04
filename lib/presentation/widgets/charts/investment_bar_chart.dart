@@ -68,7 +68,7 @@ class _InvestmentBarChartState extends State<InvestmentBarChart> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   decoration: BoxDecoration(
-                    color: AppColors.primaryAccent.withValues(alpha: 0.1),
+                    color: AppColors.primaryAccent.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
@@ -155,7 +155,7 @@ class _InvestmentBarChartState extends State<InvestmentBarChart> {
                   horizontalInterval: maxInvested / 5,
                   getDrawingHorizontalLine: (value) {
                     return FlLine(
-                      color: AppColors.borderLight.withValues(alpha: 0.3),
+                      color: AppColors.borderLight.withOpacity(0.3),
                       strokeWidth: 1,
                     );
                   },
@@ -222,7 +222,7 @@ class _InvestmentBarChartState extends State<InvestmentBarChart> {
           BarChartRodData(
             toY: project.totalInvertido,
             color: isTouched
-                ? color.withValues(alpha: 0.8)
+                ? color.withOpacity(0.8)
                 : color,
             width: 16,
             borderRadius: const BorderRadius.only(
@@ -234,7 +234,7 @@ class _InvestmentBarChartState extends State<InvestmentBarChart> {
               end: Alignment.topCenter,
               colors: [
                 color,
-                color.withValues(alpha: 0.7),
+                color.withOpacity(0.7),
               ],
             ),
           ),

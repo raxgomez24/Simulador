@@ -33,7 +33,7 @@ class ProfileInfoDialog extends StatelessWidget {
                     width: 56,
                     height: 56,
                     decoration: BoxDecoration(
-                      color: color.withValues(alpha: 0.2),
+                      color: color.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(
@@ -70,8 +70,8 @@ class ProfileInfoDialog extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                           decoration: BoxDecoration(
                             color: profile.isActive
-                                ? AppColors.success.withValues(alpha: 0.2)
-                                : AppColors.error.withValues(alpha: 0.2),
+                                ? AppColors.success.withOpacity(0.2)
+                                : AppColors.error.withOpacity(0.2),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
@@ -188,7 +188,7 @@ class ProfileInfoDialog extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(8),
             decoration: BoxDecoration(
-              color: color.withValues(alpha: 0.2),
+              color: color.withOpacity(0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: color, size: 24),
@@ -246,11 +246,11 @@ class ProfileInfoDialog extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           decoration: BoxDecoration(
             color: isEnabled
-                ? color.withValues(alpha: 0.15)
-                : AppColors.tertiaryBackground.withValues(alpha: 0.5),
+                ? color.withOpacity(0.15)
+                : AppColors.tertiaryBackground.withOpacity(0.5),
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: isEnabled ? color.withValues(alpha: 0.3) : AppColors.borderDark,
+              color: isEnabled ? color.withOpacity(0.3) : AppColors.borderDark,
             ),
           ),
           child: Row(
@@ -362,7 +362,7 @@ class ProfileInfoDialog extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
+        color: color.withOpacity(0.1),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(

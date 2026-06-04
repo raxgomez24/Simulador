@@ -47,12 +47,12 @@ class HamburgerMenuItem extends StatelessWidget {
         margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
         decoration: BoxDecoration(
           color: isSelected
-              ? AppColors.primaryAccent.withValues(alpha: 0.1)
+              ? AppColors.primaryAccent.withOpacity(0.1)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isSelected
-                ? AppColors.primaryAccent.withValues(alpha: 0.3)
+                ? AppColors.primaryAccent.withOpacity(0.3)
                 : Colors.transparent,
             width: 1,
           ),
@@ -69,9 +69,9 @@ class HamburgerMenuItem extends StatelessWidget {
                   height: 40,
                   decoration: BoxDecoration(
                     color: isDanger
-                        ? AppColors.error.withValues(alpha: 0.1)
+                        ? AppColors.error.withOpacity(0.1)
                         : isSelected
-                            ? AppColors.primaryAccent.withValues(alpha: 0.2)
+                            ? AppColors.primaryAccent.withOpacity(0.2)
                             : AppColors.tertiaryBackground,
                     borderRadius: BorderRadius.circular(10),
                   ),
@@ -93,7 +93,7 @@ class HamburgerMenuItem extends StatelessWidget {
                 ),
                 Icon(
                   Icons.chevron_right,
-                  color: AppColors.textSecondary.withValues(alpha: 0.5),
+                  color: AppColors.textSecondary.withOpacity(0.5),
                   size: 20,
                 ),
               ],

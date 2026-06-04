@@ -64,7 +64,7 @@ class ProjectDeleteDialog extends ConsumerWidget {
                         height: 50,
                         decoration: BoxDecoration(
                           color: _hexToColor(project.temaColor ?? '#00D4AA')
-                              .withValues(alpha: 0.2),
+                              .withOpacity(0.2),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: const Icon(
@@ -137,7 +137,7 @@ class ProjectDeleteDialog extends ConsumerWidget {
               Container(
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: AppColors.warning.withValues(alpha: 0.1),
+                  color: AppColors.warning.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: AppColors.warning),
                 ),

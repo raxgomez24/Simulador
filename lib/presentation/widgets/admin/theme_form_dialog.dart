@@ -265,7 +265,6 @@ class _ThemeFormDialogState extends ConsumerState<ThemeFormDialog> {
                                   _isActive = value;
                                 });
                               },
-                              activeThumbColor: AppColors.primaryAccent,
                             ),
                           ],
                         ),
@@ -387,7 +386,7 @@ class _ThemeFormDialogState extends ConsumerState<ThemeFormDialog> {
                     height: 50,
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? _hexToColor(_selectedColor).withValues(alpha: 0.3)
+                          ? _hexToColor(_selectedColor).withOpacity(0.3)
                           : AppColors.tertiaryBackground,
                       shape: BoxShape.circle,
                       border: Border.all(
@@ -431,7 +430,7 @@ class _ThemeFormDialogState extends ConsumerState<ThemeFormDialog> {
             width: 60,
             height: 60,
             decoration: BoxDecoration(
-              color: _hexToColor(_selectedColor).withValues(alpha: 0.2),
+              color: _hexToColor(_selectedColor).withOpacity(0.2),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(

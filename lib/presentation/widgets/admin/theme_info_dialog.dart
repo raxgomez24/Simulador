@@ -37,7 +37,7 @@ class ThemeInfoDialog extends ConsumerWidget {
                     width: 60,
                     height: 60,
                     decoration: BoxDecoration(
-                      color: _hexToColor(theme.color).withValues(alpha: 0.2),
+                      color: _hexToColor(theme.color).withOpacity(0.2),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(
                         color: _hexToColor(theme.color),
@@ -208,7 +208,7 @@ class ThemeInfoDialog extends ConsumerWidget {
                             Icon(
                               Icons.inbox,
                               size: 64,
-                              color: AppColors.textSecondary.withValues(alpha: 0.5),
+                              color: AppColors.textSecondary.withOpacity(0.5),
                             ),
                             const SizedBox(height: 16),
                             Text(
@@ -330,7 +330,7 @@ class ThemeInfoDialog extends ConsumerWidget {
               height: 60,
               decoration: BoxDecoration(
                 color: project.temaColor != null
-                    ? _hexToColor(project.temaColor!).withValues(alpha: 0.2)
+                    ? _hexToColor(project.temaColor!).withOpacity(0.2)
                     : AppColors.tertiaryBackground,
                 borderRadius: BorderRadius.circular(8),
               ),

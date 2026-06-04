@@ -237,7 +237,7 @@ class HamburgerMenu extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 20,
-                    backgroundColor: Colors.white.withValues(alpha: 0.2),
+                    backgroundColor: Colors.white.withOpacity(0.2),
                     child: Text(
                       user?.initials ?? '??',
                       style: const TextStyle(
@@ -266,7 +266,7 @@ class HamburgerMenu extends StatelessWidget {
                           user?.username ?? '',
                           style: TextStyle(
                             fontSize: 12,
-                            color: Colors.white.withValues(alpha: 0.8),
+                            color: Colors.white.withOpacity(0.8),
                           ),
                         ),
                       ],
@@ -332,7 +332,7 @@ class HamburgerMenu extends StatelessWidget {
             'Versión 1.0.0',
             style: TextStyle(
               fontSize: 11,
-              color: AppColors.textSecondary.withValues(alpha: 0.7),
+              color: AppColors.textSecondary.withOpacity(0.7),
             ),
           ),
         ],

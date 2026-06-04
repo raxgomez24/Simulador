@@ -151,7 +151,7 @@ class _ThemesManagementScreenState extends ConsumerState<ThemesManagementScreen>
                       Icon(
                         Icons.inbox,
                         size: 64,
-                        color: AppColors.textSecondary.withValues(alpha: 0.5),
+                        color: AppColors.textSecondary.withOpacity(0.5),
                       ),
                       const SizedBox(height: 16),
                       Text(
@@ -188,7 +188,7 @@ class _ThemesManagementScreenState extends ConsumerState<ThemesManagementScreen>
                       Icon(
                         Icons.search_off,
                         size: 64,
-                        color: AppColors.textSecondary.withValues(alpha: 0.5),
+                        color: AppColors.textSecondary.withOpacity(0.5),
                       ),
                       const SizedBox(height: 16),
                       Text(
@@ -389,7 +389,7 @@ class _ThemesManagementScreenState extends ConsumerState<ThemesManagementScreen>
                       width: isList ? 50 : 60,
                       height: isList ? 50 : 60,
                       decoration: BoxDecoration(
-                        color: _hexToColor(theme.color).withValues(alpha: 0.2),
+                        color: _hexToColor(theme.color).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Center(
@@ -405,8 +405,8 @@ class _ThemesManagementScreenState extends ConsumerState<ThemesManagementScreen>
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
                         color: theme.activo
-                            ? AppColors.success.withValues(alpha: 0.2)
-                            : AppColors.error.withValues(alpha: 0.2),
+                            ? AppColors.success.withOpacity(0.2)
+                            : AppColors.error.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Row(

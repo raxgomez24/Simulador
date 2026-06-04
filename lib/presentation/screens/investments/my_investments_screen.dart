@@ -364,7 +364,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primaryAccent.withValues(alpha: 0.3),
+            color: AppColors.primaryAccent.withOpacity(0.3),
             blurRadius: 20,
             offset: const Offset(0, 10),
           ),
@@ -376,7 +376,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
             children: [
               CircleAvatar(
                 radius: 28,
-                backgroundColor: Colors.white.withValues(alpha: 0.2),
+                backgroundColor: Colors.white.withOpacity(0.2),
                 child: Text(
                   user?.initials ?? '??',
                   style: const TextStyle(
@@ -403,7 +403,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
                       user != null ? _getRoleName(user.perfil) : 'Invitado',
                       style: TextStyle(
                         fontSize: 14,
-                        color: Colors.white.withValues(alpha: 0.8),
+                        color: Colors.white.withOpacity(0.8),
                       ),
                     ),
                   ],
@@ -424,7 +424,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
               Container(
                 width: 1,
                 height: 40,
-                color: Colors.white.withValues(alpha: 0.3),
+                color: Colors.white.withOpacity(0.3),
               ),
               Expanded(
                 child: _buildStatItem(
@@ -447,7 +447,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
   }) {
     return Column(
       children: [
-        Icon(icon, color: Colors.white.withValues(alpha: 0.8), size: 20),
+        Icon(icon, color: Colors.white.withOpacity(0.8), size: 20),
         const SizedBox(height: 4),
         Text(
           value,
@@ -461,7 +461,7 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
           label,
           style: TextStyle(
             fontSize: 12,
-            color: Colors.white.withValues(alpha: 0.8),
+            color: Colors.white.withOpacity(0.8),
           ),
           textAlign: TextAlign.center,
         ),
@@ -501,8 +501,8 @@ class _MyInvestmentsScreenState extends ConsumerState<MyInvestmentsScreen> {
           decoration: BoxDecoration(
             gradient: LinearGradient(
               colors: [
-                AppColors.primaryAccent.withValues(alpha: 0.2),
-                AppColors.secondaryAccent.withValues(alpha: 0.2),
+                AppColors.primaryAccent.withOpacity(0.2),
+                AppColors.secondaryAccent.withOpacity(0.2),
               ],
             ),
             borderRadius: BorderRadius.circular(12),

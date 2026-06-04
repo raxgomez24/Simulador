@@ -154,7 +154,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           width: 56,
           height: 56,
           decoration: BoxDecoration(
-            color: AppColors.white.withValues(alpha: 0.2),
+            color: AppColors.white.withOpacity( 0.2),
             borderRadius: BorderRadius.circular(28),
           ),
           child: Center(
@@ -185,7 +185,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 user?.username ?? '',
                 style: TextStyle(
                   fontSize: 14,
-                  color: Colors.white.withValues(alpha: 0.8),
+                  color: Colors.white.withOpacity( 0.8),
                 ),
               ),
             ],
@@ -213,7 +213,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           AppStrings.balance,
           style: TextStyle(
             fontSize: 14,
-            color: Colors.white.withValues(alpha: 0.8),
+            color: Colors.white.withOpacity( 0.8),
           ),
         ),
         const SizedBox(height: 4),

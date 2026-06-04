@@ -252,10 +252,10 @@ class _UserFormDialogState extends ConsumerState<UserFormDialog> {
                 Container(
                   padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
-                    color: AppColors.primaryAccent.withValues(alpha: 0.1),
+                    color: AppColors.primaryAccent.withOpacity( 0.1),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: AppColors.primaryAccent.withValues(alpha: 0.3),
+                      color: AppColors.primaryAccent.withOpacity( 0.3),
                     ),
                   ),
                   child: Row(
@@ -313,8 +313,7 @@ class _UserFormDialogState extends ConsumerState<UserFormDialog> {
                     _activo = value;
                   });
                 },
-                activeTrackColor: AppColors.primaryAccent.withValues(alpha: 0.3),
-                activeThumbColor: AppColors.primaryAccent,
+                activeTrackColor: AppColors.primaryAccent.withOpacity(0.3),
               ),
             ],
           ),
@@ -366,7 +365,7 @@ class DeleteUserDialog extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: AppColors.primaryAccent.withValues(alpha: 0.2),
+                  backgroundColor: AppColors.primaryAccent.withOpacity( 0.2),
                   child: Text(
                     user.initials,
                     style: const TextStyle(
@@ -401,10 +400,10 @@ class DeleteUserDialog extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
-              color: AppColors.warning.withValues(alpha: 0.1),
+              color: AppColors.warning.withOpacity( 0.1),
               borderRadius: BorderRadius.circular(8),
               border: Border.all(
-                color: AppColors.warning.withValues(alpha: 0.3),
+                color: AppColors.warning.withOpacity( 0.3),
               ),
             ),
             child: const Row(
@@ -706,7 +705,7 @@ class UserCard extends StatelessWidget {
               // Avatar
               CircleAvatar(
                 radius: 28,
-                backgroundColor: _getPerfilColor(user.perfil).withValues(alpha: 0.2),
+                backgroundColor: _getPerfilColor(user.perfil).withOpacity( 0.2),
                 child: Text(
                   user.initials,
                   style: TextStyle(
@@ -741,8 +740,8 @@ class UserCard extends StatelessWidget {
                           ),
                           decoration: BoxDecoration(
                             color: user.activo
-                                ? AppColors.success.withValues(alpha: 0.2)
-                                : AppColors.error.withValues(alpha: 0.2),
+                                ? AppColors.success.withOpacity( 0.2)
+                                : AppColors.error.withOpacity( 0.2),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Row(
@@ -841,7 +840,7 @@ class UserCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: 0.1),
+        color: color.withOpacity( 0.1),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(

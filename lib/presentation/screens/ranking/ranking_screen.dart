@@ -186,7 +186,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
             decoration: BoxDecoration(
-              color: const Color(0xFF10B981).withValues(alpha: 0.2),
+              color: const Color(0xFF10B981).withOpacity( 0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -219,7 +219,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
             decoration: BoxDecoration(
-              color: const Color(0xFFEF4444).withValues(alpha: 0.2),
+              color: const Color(0xFFEF4444).withOpacity( 0.2),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Row(
@@ -255,7 +255,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
         decoration: BoxDecoration(
-          color: const Color(0xFF10B981).withValues(alpha: 0.2),
+          color: const Color(0xFF10B981).withOpacity( 0.2),
           borderRadius: BorderRadius.circular(4),
         ),
         child: const Icon(
@@ -268,7 +268,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 1),
         decoration: BoxDecoration(
-          color: const Color(0xFFEF4444).withValues(alpha: 0.2),
+          color: const Color(0xFFEF4444).withOpacity( 0.2),
           borderRadius: BorderRadius.circular(4),
         ),
         child: const Icon(
@@ -654,7 +654,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
                             gradient: LinearGradient(
                               colors: [
                                 themeColor,
-                                themeColor.withValues(alpha: 0.7),
+                                themeColor.withOpacity( 0.7),
                               ],
                             ),
                             borderRadius: BorderRadius.circular(4),
@@ -700,7 +700,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
             boxShadow: isTopThree
                 ? [
                     BoxShadow(
-                      color: themeColor.withValues(alpha: 0.1),
+                      color: themeColor.withOpacity( 0.1),
                       blurRadius: 3,
                       offset: const Offset(0, 1),
                     ),
@@ -723,7 +723,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
                         gradient: LinearGradient(
                           colors: [
                             themeColor,
-                            themeColor.withValues(alpha: 0.7),
+                            themeColor.withOpacity( 0.7),
                           ],
                         ),
                         shape: BoxShape.circle,
@@ -835,7 +835,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
                 ? [
                     BoxShadow(
                       color: _parseColor(project.temaColor ?? '#00D4AA')
-                          .withValues(alpha: 0.2),
+                          .withOpacity( 0.2),
                       blurRadius: 10,
                       offset: const Offset(0, 4),
                     ),
@@ -932,13 +932,13 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
             end: Alignment.bottomRight,
             colors: [
               badgeColor,
-              badgeColor.withValues(alpha: 0.7),
+              badgeColor.withOpacity( 0.7),
             ],
           ),
           shape: BoxShape.circle,
           boxShadow: [
             BoxShadow(
-              color: badgeColor.withValues(alpha: 0.3),
+              color: badgeColor.withOpacity( 0.3),
               blurRadius: 8,
               offset: const Offset(0, 2),
             ),
@@ -1016,7 +1016,7 @@ class _RankingScreenState extends ConsumerState<RankingScreen> {
           Icon(
             Icons.leaderboard,
             size: 64,
-            color: AppColors.textSecondary.withValues(alpha: 0.5),
+            color: AppColors.textSecondary.withOpacity( 0.5),
           ),
           const SizedBox(height: 16),
           const Text(

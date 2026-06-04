@@ -100,7 +100,7 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
     return Container(
       height: 200,
       decoration: BoxDecoration(
-        color: temaColor.withValues(alpha: 0.1),
+        color: temaColor.withOpacity(0.1),
         borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(12),
           topRight: Radius.circular(12),
@@ -121,7 +121,7 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
                   fit: BoxFit.cover,
                   errorBuilder: (context, error, stackTrace) {
                     return Container(
-                      color: temaColor.withValues(alpha: 0.2),
+                      color: temaColor.withOpacity(0.2),
                       child: Center(
                         child: Icon(
                           Icons.business_center,
@@ -144,7 +144,7 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
                     end: Alignment.bottomCenter,
                     colors: [
                       Colors.transparent,
-                      AppColors.secondaryBackground.withValues(alpha: 0.9),
+                      AppColors.secondaryBackground.withOpacity(0.9),
                     ],
                   ),
                   borderRadius: const BorderRadius.only(
@@ -415,8 +415,8 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
               color: widget.project.activo
-                  ? AppColors.success.withValues(alpha: 0.1)
-                  : AppColors.error.withValues(alpha: 0.1),
+                  ? AppColors.success.withOpacity(0.1)
+                  : AppColors.error.withOpacity(0.1),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: widget.project.activo ? AppColors.success : AppColors.error,
@@ -578,7 +578,7 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-              color: temaColor.withValues(alpha: 0.3),
+              color: temaColor.withOpacity(0.3),
               shape: BoxShape.circle,
             ),
             child: foto != null && foto.isNotEmpty
@@ -633,7 +633,7 @@ class _ProjectInfoDialogState extends ConsumerState<ProjectInfoDialog>
                     vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: temaColor.withValues(alpha: 0.2),
+                    color: temaColor.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Text(

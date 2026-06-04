@@ -87,7 +87,7 @@ class _ProfileEditDialogState extends State<ProfileEditDialog> {
                       width: 40,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: _parseColor(_selectedColor).withValues(alpha: 0.2),
+                        color: _parseColor(_selectedColor).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       child: Icon(
@@ -139,7 +139,7 @@ class _ProfileEditDialogState extends State<ProfileEditDialog> {
                     ),
                     disabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
-                      borderSide: BorderSide(color: AppColors.borderDark.withValues(alpha: 0.5)),
+                      borderSide: BorderSide(color: AppColors.borderDark.withOpacity(0.5)),
                     ),
                     suffixIcon: widget.profile.isSystemProfile
                         ? const Icon(Icons.lock, color: AppColors.textSecondary, size: 20)

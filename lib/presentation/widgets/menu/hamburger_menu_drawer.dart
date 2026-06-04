@@ -215,7 +215,7 @@ class _HamburgerMenuDrawerState extends ConsumerState<HamburgerMenuDrawer>
                 }
               },
               child: Container(
-                color: AppColors.overlay.withValues(alpha: _fadeAnimation.value * 0.5),
+                color: AppColors.overlay.withOpacity(_fadeAnimation.value * 0.5),
                 child: menuState.isOpen
                     ? const SizedBox.expand()
                     : const SizedBox.shrink(),
@@ -269,7 +269,7 @@ class _HamburgerMenuDrawerState extends ConsumerState<HamburgerMenuDrawer>
                                 vertical: 12,
                               ),
                               child: Divider(
-                                color: AppColors.textSecondary.withValues(alpha: 0.2),
+                                color: AppColors.textSecondary.withOpacity(0.2),
                                 thickness: 1,
                               ),
                             );

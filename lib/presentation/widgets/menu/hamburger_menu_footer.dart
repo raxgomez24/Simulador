@@ -16,7 +16,7 @@ class HamburgerMenuFooter extends StatelessWidget {
         color: AppColors.secondaryBackground,
         border: Border(
           top: BorderSide(
-            color: AppColors.borderLight.withValues(alpha: 0.3),
+            color: AppColors.borderLight.withOpacity(0.3),
             width: 1,
           ),
         ),
@@ -46,7 +46,7 @@ class HamburgerMenuFooter extends StatelessWidget {
           Text(
             'Versión ${AppConfig.appVersion}',
             style: theme.textTheme.bodySmall?.copyWith(
-              color: AppColors.textSecondary.withValues(alpha: 0.7),
+              color: AppColors.textSecondary.withOpacity(0.7),
               fontSize: 10,
             ),
           ),

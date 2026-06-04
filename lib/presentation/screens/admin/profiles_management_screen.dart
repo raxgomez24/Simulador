@@ -182,12 +182,12 @@ class ProfilesManagementScreen extends ConsumerWidget {
           color: AppColors.cardBackground,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
-            color: isInactive ? AppColors.borderDark : color.withValues(alpha: 0.3),
+            color: isInactive ? AppColors.borderDark : color.withOpacity(0.3),
             width: isInactive ? 1 : 2,
           ),
           boxShadow: [
             BoxShadow(
-              color: color.withValues(alpha: 0.1),
+              color: color.withOpacity(0.1),
               blurRadius: 8,
               offset: const Offset(0, 4),
             ),
@@ -200,7 +200,7 @@ class ProfilesManagementScreen extends ConsumerWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: color.withValues(alpha: 0.1),
+                color: color.withOpacity(0.1),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
@@ -244,7 +244,7 @@ class ProfilesManagementScreen extends ConsumerWidget {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        color: AppColors.error.withValues(alpha: 0.2),
+                        color: AppColors.error.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: Text(
@@ -291,7 +291,7 @@ class ProfilesManagementScreen extends ConsumerWidget {
                           profile.description!,
                           style: theme.textTheme.bodySmall?.copyWith(
                             color: isInactive
-                                ? AppColors.textSecondary.withValues(alpha: 0.6)
+                                ? AppColors.textSecondary.withOpacity(0.6)
                                 : AppColors.textSecondary,
                             fontSize: 11,
                           ),

@@ -184,7 +184,7 @@ class _UsersManagementScreenState extends ConsumerState<UsersManagementScreen> {
         color: AppColors.secondaryBackground,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.1),
+            color: Colors.black.withOpacity(0.1),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -321,7 +321,7 @@ class _UsersManagementScreenState extends ConsumerState<UsersManagementScreen> {
           Icon(
             Icons.people_outline,
             size: 80,
-            color: AppColors.textSecondary.withValues(alpha: 0.5),
+            color: AppColors.textSecondary.withOpacity(0.5),
           ),
           const SizedBox(height: 16),
           const Text(
@@ -361,7 +361,7 @@ class _UsersManagementScreenState extends ConsumerState<UsersManagementScreen> {
           Icon(
             Icons.search_off,
             size: 80,
-            color: AppColors.textSecondary.withValues(alpha: 0.5),
+            color: AppColors.textSecondary.withOpacity(0.5),
           ),
           const SizedBox(height: 16),
           const Text(
@@ -464,10 +464,10 @@ class _UsersManagementScreenState extends ConsumerState<UsersManagementScreen> {
         return Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: getColor().withValues(alpha: 0.15),
+            color: getColor().withOpacity(0.15),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: getColor().withValues(alpha: 0.5),
+              color: getColor().withOpacity(0.5),
               width: isNearLimit || isOverLimit ? 2 : 1,
             ),
           ),

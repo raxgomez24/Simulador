@@ -170,7 +170,7 @@ class _EnhancedAdminDashboardScreenState
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: AppColors.primaryAccent.withValues(alpha: 0.2),
+              color: AppColors.primaryAccent.withOpacity( 0.2),
               borderRadius: BorderRadius.circular(12),
             ),
             child: const Text(
@@ -380,7 +380,7 @@ class _EnhancedAdminDashboardScreenState
         border: Border.all(color: AppColors.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity( 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -410,8 +410,7 @@ class _EnhancedAdminDashboardScreenState
                 onChanged: (value) {
                   setState(() => _showRealTimeData = value);
                 },
-                activeTrackColor: AppColors.primaryAccent.withValues(alpha: 0.5),
-                activeThumbColor: AppColors.primaryAccent,
+                activeTrackColor: AppColors.primaryAccent.withOpacity(0.5),
               ),
               const SizedBox(width: 8),
               const Text(
@@ -516,7 +515,7 @@ class _EnhancedAdminDashboardScreenState
         setState(() => _selectedTimeFilter = value);
       },
       backgroundColor: AppColors.tertiaryBackground,
-      selectedColor: AppColors.primaryAccent.withValues(alpha: 0.3),
+      selectedColor: AppColors.primaryAccent.withOpacity( 0.3),
       checkmarkColor: AppColors.primaryAccent,
       labelStyle: TextStyle(
         color: isSelected ? AppColors.primaryAccent : AppColors.textSecondary,
@@ -547,18 +546,18 @@ class _EnhancedAdminDashboardScreenState
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.primaryAccent.withValues(alpha: 0.15),
-            AppColors.secondaryAccent.withValues(alpha: 0.15),
+            AppColors.primaryAccent.withOpacity( 0.15),
+            AppColors.secondaryAccent.withOpacity( 0.15),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: AppColors.primaryAccent.withValues(alpha: 0.3),
+          color: AppColors.primaryAccent.withOpacity( 0.3),
           width: 2,
         ),
         boxShadow: [
           BoxShadow(
-            color: AppColors.primaryAccent.withValues(alpha: 0.1),
+            color: AppColors.primaryAccent.withOpacity( 0.1),
             blurRadius: 20,
             offset: const Offset(0, 8),
           ),
@@ -587,10 +586,10 @@ class _EnhancedAdminDashboardScreenState
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
-                  color: _getSessionStatusColor(session?.estado).withValues(alpha: 0.2),
+                  color: _getSessionStatusColor(session?.estado).withOpacity( 0.2),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: _getSessionStatusColor(session?.estado).withValues(alpha: 0.5),
+                    color: _getSessionStatusColor(session?.estado).withOpacity( 0.5),
                     width: 2,
                   ),
                 ),
@@ -815,7 +814,7 @@ class _EnhancedAdminDashboardScreenState
               iconSize: 40,
               color: _roundDurationMinutes > 5 && !_isSendingCommand
                   ? AppColors.primaryAccent
-                  : AppColors.textSecondary.withValues(alpha: 0.3),
+                  : AppColors.textSecondary.withOpacity( 0.3),
             ),
             const SizedBox(width: 24),
             Text(
@@ -840,7 +839,7 @@ class _EnhancedAdminDashboardScreenState
               iconSize: 40,
               color: _roundDurationMinutes < 120 && !_isSendingCommand
                   ? AppColors.primaryAccent
-                  : AppColors.textSecondary.withValues(alpha: 0.3),
+                  : AppColors.textSecondary.withOpacity( 0.3),
             ),
           ],
         ),
@@ -919,14 +918,14 @@ class _EnhancedAdminDashboardScreenState
             ? LinearGradient(
                 colors: [
                   AppColors.primaryAccent,
-                  AppColors.primaryAccent.withValues(alpha: 0.8),
+                  AppColors.primaryAccent.withOpacity( 0.8),
                 ],
               )
             : (isDanger
                 ? LinearGradient(
                     colors: [
                       AppColors.error,
-                      AppColors.error.withValues(alpha: 0.8),
+                      AppColors.error.withOpacity( 0.8),
                     ],
                   )
                 : null),
@@ -941,7 +940,7 @@ class _EnhancedAdminDashboardScreenState
         boxShadow: isActive
             ? [
                 BoxShadow(
-                  color: AppColors.primaryAccent.withValues(alpha: 0.3),
+                  color: AppColors.primaryAccent.withOpacity( 0.3),
                   blurRadius: 12,
                   offset: const Offset(0, 4),
                 ),
@@ -1182,17 +1181,17 @@ class _EnhancedAdminDashboardScreenState
           end: Alignment.bottomRight,
           colors: [
             AppColors.cardBackground,
-            AppColors.cardBackground.withValues(alpha: 0.8),
+            AppColors.cardBackground.withOpacity( 0.8),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: color.withValues(alpha: 0.3),
+          color: color.withOpacity( 0.3),
           width: 2,
         ),
         boxShadow: [
           BoxShadow(
-            color: color.withValues(alpha: 0.1),
+            color: color.withOpacity( 0.1),
             blurRadius: 12,
             offset: const Offset(0, 4),
           ),
@@ -1206,7 +1205,7 @@ class _EnhancedAdminDashboardScreenState
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.2),
+                  color: color.withOpacity( 0.2),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(icon, color: color, size: 24),
@@ -1220,7 +1219,7 @@ class _EnhancedAdminDashboardScreenState
                   ),
                   decoration: BoxDecoration(
                     color: (trendUp ? AppColors.success : AppColors.error)
-                        .withValues(alpha: 0.2),
+                        .withOpacity( 0.2),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Row(
@@ -1284,7 +1283,7 @@ class _EnhancedAdminDashboardScreenState
         border: Border.all(color: AppColors.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity( 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1320,8 +1319,8 @@ class _EnhancedAdminDashboardScreenState
                       color: AppColors.success,
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.success.withValues(
-                            alpha: 0.5 * _pulseAnimationController.value,
+                          color: AppColors.success.withOpacity(
+                            0.5 * _pulseAnimationController.value,
                           ),
                           blurRadius: 8,
                           spreadRadius: 2,
@@ -1387,10 +1386,10 @@ class _EnhancedAdminDashboardScreenState
               margin: const EdgeInsets.only(bottom: 12),
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: AppColors.secondaryBackground.withValues(alpha: 0.5),
+                color: AppColors.secondaryBackground.withOpacity( 0.5),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: AppColors.borderLight.withValues(alpha: 0.5),
+                  color: AppColors.borderLight.withOpacity( 0.5),
                 ),
               ),
               child: Row(
@@ -1454,7 +1453,7 @@ class _EnhancedAdminDashboardScreenState
                       vertical: 6,
                     ),
                     decoration: BoxDecoration(
-                      color: AppColors.success.withValues(alpha: 0.2),
+                      color: AppColors.success.withOpacity( 0.2),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -1548,7 +1547,7 @@ class _EnhancedAdminDashboardScreenState
         border: Border.all(color: AppColors.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity( 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1769,7 +1768,7 @@ class _EnhancedAdminDashboardScreenState
         border: Border.all(color: AppColors.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity( 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -1870,10 +1869,10 @@ class _EnhancedAdminDashboardScreenState
         child: Container(
           padding: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppColors.secondaryBackground.withValues(alpha: 0.3),
+            color: AppColors.secondaryBackground.withOpacity( 0.3),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: AppColors.borderLight.withValues(alpha: 0.3),
+              color: AppColors.borderLight.withOpacity( 0.3),
             ),
           ),
           child: Row(
@@ -1886,13 +1885,13 @@ class _EnhancedAdminDashboardScreenState
                   gradient: LinearGradient(
                     colors: [
                       _getRankColor(rank),
-                      _getRankColor(rank).withValues(alpha: 0.8),
+                      _getRankColor(rank).withOpacity( 0.8),
                     ],
                   ),
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
-                      color: _getRankColor(rank).withValues(alpha: 0.3),
+                      color: _getRankColor(rank).withOpacity( 0.3),
                       blurRadius: 8,
                     ),
                   ],
@@ -1980,7 +1979,7 @@ class _EnhancedAdminDashboardScreenState
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                     decoration: BoxDecoration(
-                      color: AppColors.primaryAccent.withValues(alpha: 0.2),
+                      color: AppColors.primaryAccent.withOpacity( 0.2),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
@@ -2050,7 +2049,7 @@ class _EnhancedAdminDashboardScreenState
         border: Border.all(color: AppColors.borderLight),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity( 0.2),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -2280,18 +2279,18 @@ class _EnhancedAdminDashboardScreenState
             end: Alignment.bottomRight,
             colors: [
               AppColors.cardBackground,
-              AppColors.cardBackground.withValues(alpha: 0.8),
+              AppColors.cardBackground.withOpacity( 0.8),
             ],
           ),
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isEnabled ? color.withValues(alpha: 0.3) : AppColors.borderLight.withValues(alpha: 0.3),
+            color: isEnabled ? color.withOpacity( 0.3) : AppColors.borderLight.withOpacity( 0.3),
             width: 2,
           ),
           boxShadow: isEnabled
               ? [
                   BoxShadow(
-                    color: color.withValues(alpha: 0.1),
+                    color: color.withOpacity( 0.1),
                     blurRadius: 8,
                     offset: const Offset(0, 4),
                   ),
@@ -2304,12 +2303,12 @@ class _EnhancedAdminDashboardScreenState
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: isEnabled ? color.withValues(alpha: 0.2) : AppColors.textSecondary.withValues(alpha: 0.1),
+                color: isEnabled ? color.withOpacity( 0.2) : AppColors.textSecondary.withOpacity( 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
                 icon,
-                color: isEnabled ? color : AppColors.textSecondary.withValues(alpha: 0.3),
+                color: isEnabled ? color : AppColors.textSecondary.withOpacity( 0.3),
                 size: 32,
               ),
             ),
@@ -2319,7 +2318,7 @@ class _EnhancedAdminDashboardScreenState
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w600,
-                color: isEnabled ? null : AppColors.textSecondary.withValues(alpha: 0.5),
+                color: isEnabled ? null : AppColors.textSecondary.withOpacity( 0.5),
               ),
               textAlign: TextAlign.center,
             ),
@@ -2405,11 +2404,11 @@ class _EnhancedAdminDashboardScreenState
       right: 16,
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.cardBackground.withValues(alpha: 0.9),
+          color: AppColors.cardBackground.withOpacity( 0.9),
           borderRadius: BorderRadius.circular(12),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withValues(alpha: 0.3),
+              color: Colors.black.withOpacity( 0.3),
               blurRadius: 10,
             ),
           ],
@@ -2794,7 +2793,7 @@ class _ProjectsBarChart extends StatelessWidget {
                       end: Alignment.topCenter,
                       colors: [
                         color,
-                        color.withValues(alpha: 0.6),
+                        color.withOpacity( 0.6),
                       ],
                     ),
                     borderRadius: BorderRadius.circular(8),
@@ -3007,7 +3006,7 @@ class _LineChartPainter extends CustomPainter {
       ..style = PaintingStyle.stroke;
 
     final fillPaint = Paint()
-      ..color = AppColors.primaryAccent.withValues(alpha: 0.2)
+      ..color = AppColors.primaryAccent.withOpacity( 0.2)
       ..style = PaintingStyle.fill;
 
     final path = Path();

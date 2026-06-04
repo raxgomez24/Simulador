@@ -629,7 +629,7 @@ class _HelpScreenState extends ConsumerState<HelpScreen> {
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: AppColors.primaryAccent.withValues(alpha: 0.2),
+                      color: AppColors.primaryAccent.withOpacity(0.2),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Icon(icon, color: AppColors.primaryAccent, size: 28),
@@ -731,7 +731,7 @@ class _HelpScreenState extends ConsumerState<HelpScreen> {
         Container(
           padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: AppColors.secondaryAccent.withValues(alpha: 0.2),
+            color: AppColors.secondaryAccent.withOpacity(0.2),
             borderRadius: BorderRadius.circular(8),
           ),
           child: Icon(icon, color: AppColors.secondaryAccent, size: 20),
@@ -770,9 +770,9 @@ class _HelpScreenState extends ConsumerState<HelpScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppColors.tertiaryBackground.withValues(alpha: 0.5),
+        color: AppColors.tertiaryBackground.withOpacity(0.5),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: AppColors.borderLight.withValues(alpha: 0.5)),
+        border: Border.all(color: AppColors.borderLight.withOpacity(0.5)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

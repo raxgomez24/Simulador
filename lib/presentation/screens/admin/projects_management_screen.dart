@@ -365,7 +365,7 @@ class _ProjectsManagementScreenState extends ConsumerState<ProjectsManagementScr
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.3),
+            color: Colors.black.withOpacity(0.3),
             blurRadius: 10,
             offset: const Offset(0, 4),
           ),
@@ -389,7 +389,7 @@ class _ProjectsManagementScreenState extends ConsumerState<ProjectsManagementScr
                       width: 80,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: temaColor.withValues(alpha: 0.2),
+                        color: temaColor.withOpacity(0.2),
                         borderRadius: BorderRadius.circular(12),
                         image: project.imagen != null && project.imagen!.isNotEmpty
                             ? DecorationImage(
@@ -432,8 +432,8 @@ class _ProjectsManagementScreenState extends ConsumerState<ProjectsManagementScr
                                 ),
                                 decoration: BoxDecoration(
                                   color: project.activo
-                                      ? AppColors.success.withValues(alpha: 0.2)
-                                      : AppColors.error.withValues(alpha: 0.2),
+                                      ? AppColors.success.withOpacity(0.2)
+                                      : AppColors.error.withOpacity(0.2),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Row(
@@ -537,7 +537,7 @@ class _ProjectsManagementScreenState extends ConsumerState<ProjectsManagementScr
                           padding: const EdgeInsets.only(right: 8),
                           child: CircleAvatar(
                             radius: 16,
-                            backgroundColor: temaColor.withValues(alpha: 0.3),
+                            backgroundColor: temaColor.withOpacity(0.3),
                             child: Text(
                               iniciales,
                               style: TextStyle(

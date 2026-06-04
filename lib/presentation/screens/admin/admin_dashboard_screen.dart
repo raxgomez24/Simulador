@@ -192,13 +192,13 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            AppColors.primaryAccent.withValues(alpha: 0.1),
-            AppColors.secondaryAccent.withValues(alpha: 0.1),
+            AppColors.primaryAccent.withOpacity(0.1),
+            AppColors.secondaryAccent.withOpacity(0.1),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: AppColors.primaryAccent.withValues(alpha: 0.3),
+          color: AppColors.primaryAccent.withOpacity(0.3),
         ),
       ),
       child: Column(
@@ -223,10 +223,10 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: _getSessionStatusColor(session?.estado).withValues(alpha: 0.2),
+                  color: _getSessionStatusColor(session?.estado).withOpacity(0.2),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
-                    color: _getSessionStatusColor(session?.estado).withValues(alpha: 0.5),
+                    color: _getSessionStatusColor(session?.estado).withOpacity(0.5),
                   ),
                 ),
                 child: Text(
@@ -269,7 +269,7 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
                           icon: const Icon(Icons.remove),
                           color: _roundDurationMinutes > 5 && !_isSendingCommand
                               ? AppColors.primaryAccent
-                              : AppColors.textSecondary.withValues(alpha: 0.3),
+                              : AppColors.textSecondary.withOpacity(0.3),
                         ),
                         Text(
                           '$_roundDurationMinutes',
@@ -290,7 +290,7 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
                           icon: const Icon(Icons.add),
                           color: _roundDurationMinutes < 120 && !_isSendingCommand
                               ? AppColors.primaryAccent
-                              : AppColors.textSecondary.withValues(alpha: 0.3),
+                              : AppColors.textSecondary.withOpacity(0.3),
                         ),
                       ],
                     ),
@@ -648,7 +648,7 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
           color: AppColors.cardBackground,
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isEnabled ? AppColors.borderLight : AppColors.borderLight.withValues(alpha: 0.3),
+            color: isEnabled ? AppColors.borderLight : AppColors.borderLight.withOpacity(0.3),
           ),
         ),
         child: Column(
@@ -656,7 +656,7 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
           children: [
             Icon(
               icon,
-              color: isEnabled ? color : AppColors.textSecondary.withValues(alpha: 0.3),
+              color: isEnabled ? color : AppColors.textSecondary.withOpacity(0.3),
               size: 32,
             ),
             const SizedBox(height: 8),
@@ -665,7 +665,7 @@ class _AdminDashboardScreenState extends ConsumerState<AdminDashboardScreen>
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.w500,
-                color: isEnabled ? null : AppColors.textSecondary.withValues(alpha: 0.5),
+                color: isEnabled ? null : AppColors.textSecondary.withOpacity(0.5),
               ),
               textAlign: TextAlign.center,
             ),

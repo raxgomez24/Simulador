@@ -45,13 +45,13 @@ class TimerBadge extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            statusColor.withValues(alpha: 0.2),
-            statusColor.withValues(alpha: 0.1),
+            statusColor.withOpacity(0.2),
+            statusColor.withOpacity(0.1),
           ],
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: statusColor.withValues(alpha: 0.5),
+          color: statusColor.withOpacity(0.5),
           width: 1,
         ),
       ),
@@ -75,7 +75,7 @@ class TimerBadge extends StatelessWidget {
           Container(
             width: 1,
             height: 20,
-            color: statusColor.withValues(alpha: 0.3),
+            color: statusColor.withOpacity(0.3),
           ),
           const SizedBox(width: 12),
           Text(

@@ -78,12 +78,12 @@ class _CategoryCardState extends State<CategoryCard>
                     end: Alignment.bottomRight,
                     colors: widget.isSelected
                         ? [
-                            themeColor.withValues(alpha: 0.3),
-                            themeColor.withValues(alpha: 0.1),
+                            themeColor.withOpacity(0.3),
+                            themeColor.withOpacity(0.1),
                           ]
                         : [
                             AppColors.cardBackground,
-                            AppColors.cardBackground.withValues(alpha: 0.8),
+                            AppColors.cardBackground.withOpacity(0.8),
                           ],
                   ),
                   borderRadius: BorderRadius.circular(16),
@@ -94,7 +94,7 @@ class _CategoryCardState extends State<CategoryCard>
                   boxShadow: [
                     // Enhanced main shadow for 3D effect
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: widget.isSelected || _isHovered ? 0.35 : 0.15),
+                      color: Colors.black.withOpacity(widget.isSelected || _isHovered ? 0.35 : 0.15),
                       blurRadius: _isHovered ? 28 : widget.isSelected ? 20 : 12,
                       offset: Offset(0, _isHovered ? 12 : widget.isSelected ? 8 : 4),
                       spreadRadius: _isHovered ? 3 : 0,
@@ -102,7 +102,7 @@ class _CategoryCardState extends State<CategoryCard>
                     // Colored glow for selected state
                     if (widget.isSelected)
                       BoxShadow(
-                        color: themeColor.withValues(alpha: 0.25),
+                        color: themeColor.withOpacity(0.25),
                         blurRadius: 25,
                         offset: const Offset(0, 6),
                         spreadRadius: -5,
@@ -110,19 +110,19 @@ class _CategoryCardState extends State<CategoryCard>
                     // Colored glow on hover (even when not selected)
                     if (_isHovered && !widget.isSelected)
                       BoxShadow(
-                        color: themeColor.withValues(alpha: 0.15),
+                        color: themeColor.withOpacity(0.15),
                         blurRadius: 20,
                         offset: const Offset(0, 4),
                       ),
                     // Inner highlight for top edge (3D effect)
                     BoxShadow(
-                      color: Colors.white.withValues(alpha: 0.1),
+                      color: Colors.white.withOpacity(0.1),
                       blurRadius: 8,
                       offset: const Offset(0, -2),
                     ),
                     // Side shadow for depth
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.1),
+                      color: Colors.black.withOpacity(0.1),
                       blurRadius: 12,
                       offset: const Offset(-4, 0),
                     ),
@@ -142,9 +142,9 @@ class _CategoryCardState extends State<CategoryCard>
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
                             colors: [
-                              themeColor.withValues(alpha: 0.4),
+                              themeColor.withOpacity(0.4),
                               themeColor,
-                              themeColor.withValues(alpha: 0.4),
+                              themeColor.withOpacity(0.4),
                             ],
                           ),
                           borderRadius: const BorderRadius.horizontal(
@@ -169,18 +169,18 @@ class _CategoryCardState extends State<CategoryCard>
                                 begin: Alignment.topLeft,
                                 end: Alignment.bottomRight,
                                 colors: [
-                                  themeColor.withValues(alpha: 0.25),
-                                  themeColor.withValues(alpha: 0.15),
+                                  themeColor.withOpacity(0.25),
+                                  themeColor.withOpacity(0.15),
                                 ],
                               ),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                color: themeColor.withValues(alpha: 0.3),
+                                color: themeColor.withOpacity(0.3),
                                 width: 1,
                               ),
                               boxShadow: [
                                 BoxShadow(
-                                  color: themeColor.withValues(alpha: 0.2),
+                                  color: themeColor.withOpacity(0.2),
                                   blurRadius: 8,
                                   offset: const Offset(0, 2),
                                 ),
@@ -218,7 +218,7 @@ class _CategoryCardState extends State<CategoryCard>
                                 Icons.business_center,
                                 size: 11,
                                 color: widget.isSelected
-                                    ? themeColor.withValues(alpha: 0.8)
+                                    ? themeColor.withOpacity(0.8)
                                     : AppColors.textSecondary,
                               ),
                               const SizedBox(width: 3),
@@ -227,7 +227,7 @@ class _CategoryCardState extends State<CategoryCard>
                                   '${widget.theme.numeroProyectos}',
                                   style: TextStyle(
                                     color: widget.isSelected
-                                        ? themeColor.withValues(alpha: 0.9)
+                                        ? themeColor.withOpacity(0.9)
                                         : AppColors.textSecondary,
                                     fontSize: 10,
                                     fontWeight: widget.isSelected ? FontWeight.w600 : FontWeight.normal,
@@ -241,7 +241,7 @@ class _CategoryCardState extends State<CategoryCard>
                                 Icons.account_balance_wallet,
                                 size: 11,
                                 color: widget.isSelected
-                                    ? themeColor.withValues(alpha: 0.8)
+                                    ? themeColor.withOpacity(0.8)
                                     : AppColors.textSecondary,
                               ),
                               const SizedBox(width: 3),

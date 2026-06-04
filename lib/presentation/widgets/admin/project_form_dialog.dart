@@ -689,7 +689,6 @@ class _ProjectFormDialogState extends ConsumerState<ProjectFormDialog> {
                       _isActive = value;
                     });
                   },
-                  activeThumbColor: AppColors.primaryAccent,
                 ),
               ],
             ),
@@ -768,7 +767,7 @@ class _ProjectFormDialogState extends ConsumerState<ProjectFormDialog> {
                 width: 60,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: temaColor.withValues(alpha: 0.2),
+                  color: temaColor.withOpacity(0.2),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Center(
@@ -841,7 +840,7 @@ class _ProjectFormDialogState extends ConsumerState<ProjectFormDialog> {
                     : '?';
                 return CircleAvatar(
                   radius: 16,
-                  backgroundColor: temaColor.withValues(alpha: 0.3),
+                  backgroundColor: temaColor.withOpacity(0.3),
                   child: Text(
                     iniciales,
                     style: TextStyle(

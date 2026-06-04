@@ -91,39 +91,39 @@ class _ProjectCardState extends State<ProjectCard>
                   boxShadow: [
                     // Enhanced main shadow for 3D effect
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.5),
+                      color: Colors.black.withOpacity(0.5),
                       blurRadius: _isHovered ? 40 : 30,
                       offset: Offset(0, _isHovered ? 20 : 15),
                       spreadRadius: _isHovered ? 5 : 0,
                     ),
                     // Enhanced colored glow
                     BoxShadow(
-                      color: baseColor.withValues(alpha: 0.25),
+                      color: baseColor.withOpacity(0.25),
                       blurRadius: _isHovered ? 50 : 40,
                       offset: Offset(0, _isHovered ? 12 : 8),
                       spreadRadius: -8,
                     ),
                     // Deep shadow for elevation
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.4),
+                      color: Colors.black.withOpacity(0.4),
                       blurRadius: _isHovered ? 25 : 20,
                       offset: Offset(0, _isHovered ? 15 : 10),
                     ),
                     // Inner highlight for top edge (3D effect)
                     BoxShadow(
-                      color: Colors.white.withValues(alpha: 0.12),
+                      color: Colors.white.withOpacity(0.12),
                       blurRadius: 12,
                       offset: const Offset(0, -3),
                     ),
                     // Side shadow for depth
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.2),
+                      color: Colors.black.withOpacity(0.2),
                       blurRadius: 20,
                       offset: const Offset(-8, 0),
                     ),
                   ],
                   border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.1),
+                    color: Colors.white.withOpacity(0.1),
                     width: 1,
                   ),
                 ),
@@ -249,9 +249,9 @@ class _ProjectCardState extends State<ProjectCard>
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            baseColor.withValues(alpha: 0.98),
-            baseColor.withValues(alpha: 0.85),
-            baseColor.withValues(alpha: 0.65),
+            baseColor.withOpacity(0.98),
+            baseColor.withOpacity(0.85),
+            baseColor.withOpacity(0.65),
             Colors.transparent,
           ],
           stops: const [0.0, 0.25, 0.75, 1.0],
@@ -259,7 +259,7 @@ class _ProjectCardState extends State<ProjectCard>
         boxShadow: [
           // Side shadow for depth
           BoxShadow(
-            color: Colors.black.withValues(alpha: 0.2),
+            color: Colors.black.withOpacity(0.2),
             blurRadius: 20,
             offset: const Offset(5, 5),
           ),
@@ -297,7 +297,7 @@ class _ProjectCardState extends State<ProjectCard>
                   center: const Alignment(0.3, 0.4),
                   radius: 0.8,
                   colors: [
-                    Colors.black.withValues(alpha: 0.25),
+                    Colors.black.withOpacity(0.25),
                     Colors.transparent,
                   ],
                 ),
@@ -318,8 +318,8 @@ class _ProjectCardState extends State<ProjectCard>
                   end: Alignment.centerRight,
                   colors: [
                     Colors.transparent,
-                    Colors.black.withValues(alpha: 0.5),
-                    Colors.black.withValues(alpha: 0.7),
+                    Colors.black.withOpacity(0.5),
+                    Colors.black.withOpacity(0.7),
                   ],
                   stops: const [0.0, 0.5, 1.0],
                 ),
@@ -340,7 +340,7 @@ class _ProjectCardState extends State<ProjectCard>
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    Colors.white.withValues(alpha: 0.7),
+                    Colors.white.withOpacity(0.7),
                     Colors.transparent,
                   ],
                 ),
@@ -363,7 +363,7 @@ class _ProjectCardState extends State<ProjectCard>
                   begin: Alignment.centerRight,
                   end: Alignment.centerLeft,
                   colors: [
-                    Colors.white.withValues(alpha: 0.4),
+                    Colors.white.withOpacity(0.4),
                     Colors.transparent,
                   ],
                 ),
@@ -384,7 +384,7 @@ class _ProjectCardState extends State<ProjectCard>
                   end: Alignment.bottomCenter,
                   colors: [
                     Colors.transparent,
-                    Colors.black.withValues(alpha: 0.3),
+                    Colors.black.withOpacity(0.3),
                   ],
                 ),
               ),
@@ -397,12 +397,12 @@ class _ProjectCardState extends State<ProjectCard>
 
   Widget _buildPlaceholderIcon(Color baseColor) {
     return Container(
-      color: baseColor.withValues(alpha: 0.3),
+      color: baseColor.withOpacity(0.3),
       child: Center(
         child: Icon(
           Icons.business,
           size: 60,
-          color: Colors.white.withValues(alpha: 0.8),
+          color: Colors.white.withOpacity(0.8),
         ),
       ),
     );
@@ -412,10 +412,10 @@ class _ProjectCardState extends State<ProjectCard>
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
-        color: _parseColor(widget.project.temaColor ?? '#00D4AA').withValues(alpha: 0.15),
+        color: _parseColor(widget.project.temaColor ?? '#00D4AA').withOpacity(0.15),
         borderRadius: BorderRadius.circular(8),
         border: Border.all(
-          color: _parseColor(widget.project.temaColor ?? '#00D4AA').withValues(alpha: 0.3),
+          color: _parseColor(widget.project.temaColor ?? '#00D4AA').withOpacity(0.3),
           width: 1,
         ),
       ),
@@ -478,7 +478,7 @@ class _ProjectCardState extends State<ProjectCard>
                     end: Alignment.bottomRight,
                     colors: [
                       baseColor,
-                      baseColor.withValues(alpha: 0.8),
+                      baseColor.withOpacity(0.8),
                     ],
                   ),
             color: isSecondary
@@ -495,7 +495,7 @@ class _ProjectCardState extends State<ProjectCard>
                 ? null
                 : [
                     BoxShadow(
-                      color: baseColor.withValues(alpha: 0.3),
+                      color: baseColor.withOpacity(0.3),
                       blurRadius: 8,
                       offset: const Offset(0, 2),
                     ),
