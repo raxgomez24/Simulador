@@ -1,0 +1,127 @@
+name: Build Windows Executable
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (optional)'
+        required: false
+        default: 'latest'
+
+jobs:
+  build-windows:
+    name: Build Windows EXE
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.5' # Latest stable version
+          channel: 'stable'
+          cache: true
+
+      - name: Verify Flutter installation
+        run: |
+          flutter --version
+          flutter doctor
+
+      - name: Enable Windows desktop support
+        run: flutter config --enable-windows-desktop
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Verify dependencies
+        run: flutter doctor -v
+
+      - name: Build Windows release executable
+        run: |
+          flutter build windows --release
+          echo "Build completed successfully"
+
+      - name: Verify build output
+        shell: powershell
+        run: |
+          $buildPath = "build\windows\x64\runner\Release"
+          if (Test-Path $buildPath) {
+            Write-Host "Build directory exists"
+            Get-ChildItem -Path $buildPath -Recurse | Select-Object FullName, Length
+          } else {
+            Write-Error "Build directory not found!"
+            exit 1
+          }
+
+      - name: Create distribution directory
+        shell: powershell
+        run: |
+          New-Item -ItemType Directory -Force -Path dist
+          Copy-Item -Path "build\windows\x64\runner\Release\*" -Destination "dist\" -Recurse
+
+      - name: Rename executable
+        shell: powershell
+        run: |
+          if (Test-Path "dist\amerike_mba.exe") {
+            Move-Item -Path "dist\amerike_mba.exe" -Destination "dist\amerike_investment_sim.exe" -Force
+            Write-Host "Executable renamed to amerike_investment_sim.exe"
+          } else {
+            Write-Error "amerike_mba.exe not found in dist!"
+            Get-ChildItem -Path "dist\" -Recurse
+            exit 1
+          }
+
+      - name: Create ZIP archive
+        shell: powershell
+        run: |
+          $version = "${{ github.run_number }}"
+          $zipName = "amerike_investment_sim-v$version-windows.zip"
+          Compress-Archive -Path "dist\*" -DestinationPath $zipName -Force
+          Write-Host "Created archive: $zipName"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: amerike_investment_sim-windows
+          path: amerike_investment_sim-v*-windows.zip
+          retention-days: 30
+
+      - name: Create release summary
+        if: success()
+        run: |
+          echo "## Build Summary :rocket:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Platform:** Windows x64" >> $GITHUB_STEP_SUMMARY
+          echo "**Build Mode:** Release" >> $GITHUB_STEP_SUMMARY
+          echo "**Flutter Version:** 3.24.5" >> $GITHUB_STEP_SUMMARY
+          echo "**Artifact:** amerike_investment_sim-windows" >> $GITHUB_STEP_SUMMARY
+          echo "**Run Number:** ${{ github.run_number }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Download Instructions" >> $GITHUB_STEP_SUMMARY
+          echo "1. Go to the 'Actions' tab in your GitHub repository" >> $GITHUB_STEP_SUMMARY
+          echo "2. Click on the latest 'Build Windows Executable' workflow run" >> $GITHUB_STEP_SUMMARY
+          echo "3. Download the artifact from the 'Artifacts' section" >> $GITHUB_STEP_SUMMARY
+          echo "4. Unzip the file and run 'amerike_investment_sim.exe'" >> $GITHUB_STEP_SUMMARY
+
+  failure-notification:
+    name: Send failure notification
+    needs: build-windows
+    if: failure()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create failure summary
+        run: |
+          echo "## Build Failed :x:" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "The Windows build failed. Please check the logs for details." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Common Issues" >> $GITHUB_STEP_SUMMARY
+          echo "- Flutter version compatibility" >> $GITHUB_STEP_SUMMARY
+          echo "- Missing dependencies in pubspec.yaml" >> $GITHUB_STEP_SUMMARY
+          echo "- Windows-specific build errors" >> $GITHUB_STEP_SUMMARY

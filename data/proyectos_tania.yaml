@@ -1,0 +1,524 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# ARCHIVO DE DATOS DE PROYECTOS - AMERIKE MBA 2026
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Este archivo contiene toda la información de los proyectos de inversión.
+# Tania, puedes editar este archivo para agregar, modificar o eliminar proyectos.
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# CÓMO EDITAR ESTE ARCHIVO:
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# 1. Puedes agregar o quitar proyectos libremente
+# 2. Los espacios y sangrías son importantes (usa 2 espacios, no tabs)
+# 3. Las líneas que empiezan con # son comentarios (se ignoran)
+# 4. Para campos opcionales, puedes borrar toda la línea si no lo necesitas
+# 5. NO uses comillas simples ' ' - usa dobles " " si necesitas
+# 6. Los colores deben ser en formato HEX con # (ej: #FF5722)
+# 7. Los iconos pueden ser emojis (💻🏥📚) o texto
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ============================================================================
+# TEMAS (CATEGORÍAS DE INVERSIÓN)
+# ============================================================================
+# Los temas representan las categorías principales de inversión.
+# Cada proyecto debe estar asociado a un tema que exista en esta lista.
+#
+# Puedes agregar hasta 10 temas. El programa los mostrará en la pantalla de
+# inversión para que los estudiantes elijan la categoría.
+# ============================================================================
+
+temas:
+  # ------------------------------------------------------------------------------
+  # Tema 1: TECNOLOGÍA
+  # ------------------------------------------------------------------------------
+  # Proyectos relacionados con software, hardware, IA, blockchain, etc.
+  # Color azul, icono de computadora
+
+  - id: tecnologia
+    nombre: "Tecnología"
+    # Color en formato HEX (puedes usar seleccionadores de color online)
+    color: "#2196F3"
+    # Icono: puedes usar emojis o texto simple
+    icon: "💻"
+    # Descripción corta (opcional)
+    descripcion: "Innovación tecnológica, software, hardware e inteligencia artificial"
+
+  # ------------------------------------------------------------------------------
+  # Tema 2: SALUD Y BIENESTAR
+  # ------------------------------------------------------------------------------
+  # Proyectos médicos, farmacéuticos, bienestar, telemedicina
+
+  - id: salud
+    nombre: "Salud y Bienestar"
+    color: "#4CAF50"
+    icon: "🏥"
+    descripcion: "Medicina, farmacéutica, bienestar y tecnología médica"
+
+  # ------------------------------------------------------------------------------
+  # Tema 3: EDUCACIÓN
+  # ------------------------------------------------------------------------------
+  # Plataformas educativas, formación profesional, edtech
+
+  - id: educacion
+    nombre: "Educación"
+    color: "#FF9800"
+    icon: "📚"
+    descripcion: "Plataformas de aprendizaje, formación profesional y tecnología educativa"
+
+  # ------------------------------------------------------------------------------
+  # Tema 4: ENERGÍA SOSTENIBLE
+  # ------------------------------------------------------------------------------
+  # Energías renovables, sostenibilidad, medio ambiente
+
+  - id: energia
+    nombre: "Energía Sostenible"
+    color: "#00BCD4"
+    icon: "⚡"
+    descripcion: "Energías renovables, sostenibilidad y tecnologías limpias"
+
+  # ------------------------------------------------------------------------------
+  # Tema 5: FINANZAS
+  # ------------------------------------------------------------------------------
+  # Fintech, pagos, inversiones, banca digital
+
+  - id: finanzas
+    nombre: "Finanzas"
+    color: "#9C27B0"
+    icon: "💰"
+    descripcion: "Tecnología financiera, pagos digitales y servicios bancarios"
+
+  # ------------------------------------------------------------------------------
+  # Tema 6: COMERCIO Y RETAIL
+  # ------------------------------------------------------------------------------
+  # E-commerce, tiendas, logística comercial
+
+  - id: retail
+    nombre: "Comercio y Retail"
+    color: "#E91E63"
+    icon: "🛒"
+    descripcion: "Comercio electrónico, tiendas innovadoras y logística"
+
+  # ------------------------------------------------------------------------------
+  # Tema 7: BIENES RAÍCES
+  # ------------------------------------------------------------------------------
+  # Inmobiliarias, construcción, coworking, logística inmobiliaria
+
+  - id: inmobiliaria
+    nombre: "Bienes Raíces"
+    color: "#795548"
+    icon: "🏠"
+    descripcion: "Desarrollo inmobiliario, construcción y gestión de propiedades"
+
+  # ------------------------------------------------------------------------------
+  # Tema 8: TRANSPORTE Y LOGÍSTICA
+  # ------------------------------------------------------------------------------
+  # Movilidad, logística, transporte de carga, delivery
+
+  - id: transporte
+    nombre: "Transporte y Logística"
+    color: "#607D8B"
+    icon: "🚚"
+    descripcion: "Movilidad, transporte de carga y logística innovadora"
+
+# ============================================================================
+# PROYECTOS DE INVERSIÓN
+# ============================================================================
+# Cada proyecto representa una oportunidad de inversión para los estudiantes.
+#
+# IMPORTANTE: Cada proyecto debe tener un `tema_id` que coincida con uno de
+# los temas definidos arriba.
+#
+# Puedes agregar hasta 50 proyectos (o más si es necesario).
+# ============================================================================
+
+proyectos:
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PROYECTOS DE TECNOLOGÍA
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # --------------------------------------------------------------------------
+  # Proyecto 1: Inteligencia Artificial Médica
+  # --------------------------------------------------------------------------
+  # ID único del proyecto (no puede repetirse)
+  # Usa formato: tema_abreviado + numero secuencial
+
+  - id: proj_tech_001
+    # Nombre del proyecto (corto y descriptivo)
+    nombre: "Inteligencia Artificial Médica"
+
+    # Descripción detallada (1-3 párrafos)
+    descripcion: >
+      Plataforma de inteligencia artificial que ayuda a diagnosticar
+      enfermedades raras mediante análisis de imágenes médicas y datos clínicos.
+      Utiliza redes neuronales profundas para identificar patrones que los
+      médicos podrían pasar por alto, mejorando la precisión diagnóstica.
+
+    # Tema al que pertenece (debe coincidir con un tema de arriba)
+    tema_id: tecnologia
+
+    # Imagen o logo del proyecto (opcional)
+    # Puedes poner: URL de imagen, ruta local, o dejar vacío ""
+    imagen: "https://ejemplo.com/logos/ia_medica_logo.png"
+
+    # ============================================================================
+    # VIDEOS Y MULTIMEDIA (OPCIONAL)
+    # ============================================================================
+    # Puedes agregar videos de YouTube, Vimeo, o URLs de videos
+    # El programa mostrará un reproductor de video
+
+    # Video de YouTube (opcional)
+    # Puedes poner:
+    # - URL completa: "https://www.youtube.com/watch?v=c3oEJ9oSm7w"
+    # - Solo el ID: "c3oEJ9oSm7w"
+    # - URL corta: "https://youtu.be/c3oEJ9oSm7w"
+    # Ejemplo de video de demo del proyecto:
+    video_youtube: "https://www.youtube.com/watch?v=c3oEJ9oSm7w"
+
+    # Video de Vimeo (opcional)
+    # Formato: URL completa de Vimeo
+    video_vimeo: ""
+
+    # Otra URL de video (opcional)
+    # Funciona con MP4 u otros formatos directos
+    video_url: ""
+
+    # Galería de imágenes del proyecto (opcional)
+    # Puedes agregar múltiples URLs de imágenes
+    # El programa las mostrará como una galería/carrusel
+    # Ejemplo con imágenes del proyecto:
+    galeria_imagenes:
+      - "https://ejemplo.com/ia_medica/dashboard.jpg"
+      - "https://ejemplo.com/ia_medica/equipo.jpg"
+      - "https://ejemplo.com/ia_medica/resultado.jpg"
+      # Agrega más líneas con - "URL" si necesitas
+
+    # ============================================================================
+    # CAMPOS OPCIONALES (pitch, problema, solucion, etc.)
+    # ============================================================================
+    # Estos campos se usan para información detallada del proyecto.
+    # Si no los necesitas, puedes borrar las líneas.
+
+    # Pitch de ventas (frase corta que venda el proyecto)
+    pitch: "IA que salva vidas detectando enfermedades raras"
+
+    # Problema que resuelve
+    problema: >
+      Muchas enfermedades raras se detectan tarde porque los médicos
+      no tienen experiencia suficiente y los síntomas son confusos.
+
+    # Solución propuesta
+    solucion: >
+      Nuestra IA analiza millones de casos médicos para detectar patrones
+      sutiles y sugerir diagnósticos tempranos con alta precisión.
+
+    # Estrategia de ingresos (cómo ganará dinero)
+    estrategia_ingresos: >
+      Modelo SaaS para hospitales con suscripción mensual basada en
+      número de diagnósticos. Premium para investigación farmacéutica.
+
+    # Proyección financiera (opcional)
+    proyeccion_financiera: >
+      Año 1: $500K, Año 2: $2M, Año 3: $8M. Crecimiento 300% anual.
+      Break-even en mes 18.
+
+    # Participantes del equipo (opcional)
+    # Formato: lista de {nombre, rol, foto}
+    # foto es opcional - puede ser URL de imagen o dejar vacío ""
+    participantes:
+      - nombre: "Dr. Ana Martínez"
+        rol: "CEO / Médica Especialista"
+        foto: "https://ejemplo.com/fotos/ana_martinez.jpg"
+        # Si no tienes foto, deja foto: "" o borra la línea
+      - nombre: "Eng. Carlos Ruiz"
+        rol: "CTO / Experto en IA"
+        foto: "https://ejemplo.com/fotos/carlos_ruiz.jpg"
+      # Puedes agregar más participantes copiando el bloque anterior
+
+    # Orden de visualización (menor número aparece primero)
+    orden: 1
+
+    # Estado del proyecto (true = activo, false = oculto)
+    activo: true
+
+  # --------------------------------------------------------------------------
+  # Proyecto 2: Blockchain para Supply Chain
+  # --------------------------------------------------------------------------
+
+  - id: proj_tech_002
+    nombre: "Blockchain para Supply Chain"
+    descripcion: >
+      Sistema de trazabilidad basado en blockchain para cadenas de suministro
+      internacionales. Permite rastrear productos desde el origen hasta el
+      consumidor final con total transparencia y seguridad inmutable.
+    tema_id: tecnologia
+    imagen: ""
+    # Ejemplo de video de YouTube (cambia el ID por uno real)
+    video_youtube: "https://www.youtube.com/watch?v=c3oEJ9oSm7w"
+    # Galería vacía (puedes borrar estas líneas si no la necesitas)
+    galeria_imagenes: []
+    pitch: "Trazabilidad total con tecnología blockchain"
+    problema: >
+      Las empresas pierden millones por falsificación y falta de
+      visibilidad en sus cadenas de suministro.
+    solucion: >
+      Blockchain crea un registro inmutable de cada movimiento del producto,
+      garantizando autenticidad y transparencia.
+    estrategia_ingresos: >
+      Comisión por transacción + suscripción premium para analytics
+      avanzados y API enterprise.
+    proyeccion_financiera: >
+      Año 1: $300K, Año 2: $1.2M, Año 3: $4M. Margen bruto 75%.
+    orden: 2
+    activo: true
+
+  # --------------------------------------------------------------------------
+  # Proyecto 3: EdTech Plataforma
+  # --------------------------------------------------------------------------
+
+  - id: proj_tech_003
+    nombre: "EdTech Plataforma"
+    descripcion: >
+      Plataforma educativa adaptativa que personaliza el contenido según el
+      estilo de aprendizaje de cada estudiante. Utiliza machine learning
+      para optimizar el proceso de enseñanza.
+    tema_id: tecnologia
+    imagen: ""
+    pitch: "Educación personalizada con IA"
+    problema: >
+      El sistema educativo tradicional trata a todos los estudiantes
+      por igual, ignorando sus estilos de aprendizaje únicos.
+    solucion: >
+      Nuestra plataforma adapta el contenido, ritmo y método en tiempo real
+      según el rendimiento y preferencias de cada estudiante.
+    estrategia_ingresos: >
+      B2B: Escuelas pagan $10/estudiante/mes. B2C: Suscripción individual
+      $20/mes con prueba gratuita de 14 días.
+    orden: 3
+    activo: true
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PROYECTOS DE SALUD
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # --------------------------------------------------------------------------
+  # Proyecto 4: Telemedicina 2.0
+  # --------------------------------------------------------------------------
+
+  - id: proj_health_001
+    nombre: "Telemedicina 2.0"
+    descripcion: >
+      Plataforma de telemedicina con consulta virtual, recetas electrónicas
+      y seguimiento de pacientes crónicos. Incluye integración con
+      dispositivos médicos IoT para monitoreo remoto.
+    tema_id: salud
+    imagen: ""
+    pitch: "Consulta médica desde casa, 24/7"
+    problema: >
+      Acceso limitado a especialistas, largas listas de espera, y falta
+      de seguimiento continuo de pacientes crónicos.
+    solucion: >
+      Videoconsultas con especialistas, recetas digitales enviadas a
+      farmacia, y monitoreo continuo con dispositivos IoT conectados.
+    estrategia_ingresos: >
+      Consultas: $30-50/cita. Suscripción de seguimiento: $99/mes.
+      Enterprise para clínicas con pricing personalizado.
+    proyeccion_financiera: >
+      Año 1: $800K, Año 2: $3M, Año 3: $10M. Mercado en expansión.
+    # Ejemplo de participantes con fotos
+    participantes:
+      - nombre: "Dra. Laura González"
+        rol: "CEO / Fundadora"
+        foto: "https://ejemplo.com/equipo/laura_gonzalez.jpg"
+      - nombre: "Dr. Roberto Méndez"
+        rol: "CMO / Director Médico"
+        foto: ""  # Sin foto por el momento
+      - nombre: "Ing. Sofía Chen"
+        rol: "CTO / Tecnología"
+        foto: "https://ejemplo.com/equipo/sofia_chen.jpg"
+    orden: 4
+    activo: true
+
+  # --------------------------------------------------------------------------
+  # Proyecto 5: Biotecnología Farmacéutica
+  # --------------------------------------------------------------------------
+
+  - id: proj_health_002
+    nombre: "Biotecnología Farmacéutica"
+    descripcion: >
+      Investigación y desarrollo de fármacos basados en biotecnología para
+      tratamiento de enfermedades autoinmunes. Utiliza CRISPR y otras
+      tecnologías de edición genética de vanguardia.
+    tema_id: salud
+    imagen: ""
+    pitch: "Medicina personalizada con edición genética"
+    problema: >
+      Enfermedades autoinmunes no tienen cura efectiva y los tratamientos
+      actuales solo manejan síntomas con efectos secundarios severos.
+    solucion: >
+      Terapias genéticas personalizadas que corrigen el defecto de base,
+      ofreciendo cura potencial en lugar de solo tratamiento sintomático.
+    estrategia_ingresos: >
+      Partnerships con big pharma + royaltys on sales. Modelo híbrido:
+      $50M upfront + 5% royaltys.
+    orden: 5
+    activo: true
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PROYECTOS DE EDUCACIÓN
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # --------------------------------------------------------------------------
+  # Proyecto 6: Universidad Virtual
+  # --------------------------------------------------------------------------
+
+  - id: proj_edu_001
+    nombre: "Universidad Virtual"
+    descripcion: >
+      Plataforma de educación superior completamente online con certificaciones
+      reconocidas internacionalmente. Ofrece programas en tecnología,
+      negocios y ciencias con profesores de top universities.
+    tema_id: educacion
+    imagen: ""
+    pitch: "Título universitario desde cualquier lugar"
+    problema: >
+      Educación de calidad es inaccesible por costo, ubicación u horarios
+      inflexibles que no permiten trabajar y estudiar.
+    solucion: >
+      Programas 100% online, asíncronos, con certificaciones válidas
+      globalmente. Flexibilidad total para estudiantes adultos.
+    estrategia_ingresos: >
+      Tuición: $5,000-12,000/programa. 3,000 estudiantes/año.
+      Certificaciones cortas: $200-500.
+    orden: 6
+    activo: true
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PROYECTOS DE ENERGÍA SOSTENIBLE
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # --------------------------------------------------------------------------
+  # Proyecto 7: Parque Solar Comunitario
+  # --------------------------------------------------------------------------
+
+  - id: proj_energy_001
+    nombre: "Parque Solar Comunitario"
+    descripcion: >
+      Desarrollo de parques solares para abastecer a comunidades rurales
+      con energía renovable. Incluye almacenamiento en baterías y red
+      inteligente para distribución eficiente.
+    tema_id: energia
+    imagen: ""
+    pitch: "Energía solar para comunidades rurales"
+    problema: >
+      Comunidades rurales sin acceso confiable a electricidad, dependiendo
+      de generadores diesel costosos y contaminantes.
+    solucion: >
+      Parques solares con almacenamiento que proveen energía 24/7,
+      reduciendo costos 70% y eliminando emisiones de CO2.
+    estrategia_ingresos: >
+      Venta de energía: $0.12/kWh (40% menos que diesel).
+      Contratos 20 años con garantía de suministro.
+    proyeccion_financiera: >
+      Año 1: $1.5M, Año 2: $4M, Año 3: $12M. ROI 4 años.
+    orden: 7
+    activo: true
+
+  # ═══════════════════════════════════════════════════════════════════════════
+  # PROYECTOS DE FINANZAS
+  # ═══════════════════════════════════════════════════════════════════════════
+
+  # --------------------------------------------------------------------------
+  # Proyecto 8: Fintech Pagos Internacionales
+  # --------------------------------------------------------------------------
+
+  - id: proj_finance_001
+    nombre: "Fintech Pagos Internacionales"
+    descripcion: >
+      Plataforma de pagos transfronterizos con comisiones bajas y transferencias
+      instantáneas utilizando blockchain. Enfocada en remesas y comercio B2B
+      entre México, USA y Latinoamérica.
+    tema_id: finanzas
+    imagen: ""
+    pitch: "Envía dinero al instante, sin comisiones abusivas"
+    problema: >
+      Remesas tradicionales cobran 8-12% de comisión y toman 3-5 días
+      en llegar. Pierdes dinero y tiempo.
+    solucion: >
+      Transferencias instantáneas con comisión fija de $2.50 usando
+      blockchain. Llega en segundos, no en días.
+    estrategia_ingresos: >
+      Comisión fija: $2.50 por transferencia.
+      FX spread: 0.5% (vs 5% competencia).
+      Meta: 100K transacciones/mes al año 1.
+    orden: 8
+    activo: true
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# NOTAS PARA TANIA:
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# 1. Para agregar un nuevo proyecto:
+#    - Copia cualquier bloque de "- id: proj_..." existente
+#    - Pégalo donde quieras dentro de "proyectos:"
+#    - Cambia los valores según tu nuevo proyecto
+#    - Asegúrate que "tema_id:" coincida con un tema definido arriba
+#
+# 2. Para agregar un nuevo tema:
+#    - Copia cualquier bloque de "- id: ..." dentro de "temas:"
+#    - Pégalo debajo de los temas existentes
+#    - Cambia id, nombre, color, icon
+#
+# 3. Campos obligatorios de cada proyecto:
+#    - id: (único, sin espacios)
+#    - nombre: (texto)
+#    - descripcion: (texto)
+#    - tema_id: (debe coincidir con un tema)
+#    - activo: (true o false)
+#
+# 4. Campos opcionales (pueden borrarse si no se usan):
+#    - imagen, pitch, problema, solucion, estrategia_ingresos,
+#      proyeccion_financiera, participantes, orden
+#    - Nuevos campos multimedia: video_youtube, video_vimeo, video_url,
+#      galeria_imagenes, foto (en participantes)
+#
+# 5. Sobre las FOTOS e IMÁGENES:
+#    - Pueden ser URLs de internet (ej: "https://sitio.com/foto.jpg")
+#    - O archivos locales (ej: "assets/fotos/participante1.jpg")
+#    - Si no tienes foto, deja el campo vacío: foto: ""
+#    - Formatos recomendados: JPG, PNG, WebP
+#    - Para participantes, cada uno puede tener su propia foto
+#
+# 6. Sobre los VIDEOS:
+#    - YouTube: puedes copiar la URL completa del video
+#      Ejemplo: https://www.youtube.com/watch?v=c3oEJ9oSm7w
+#      O solo el ID: c3oEJ9oSm7w
+#      El programa mostrará el reproductor embebido
+#    - Vimeo: usa la URL completa de Vimeo
+#      Ejemplo: https://vimeo.com/123456789
+#    - Video URL: para videos MP4 u otros formatos directos
+#      Ejemplo: https://misitio.com/video/demo.mp4
+#
+# 7. Sobre la GALERÍA de imágenes:
+#    - Puedes agregar tantas imágenes como quieras
+#    - Cada línea con - "URL" agrega una imagen a la galería
+#    - El programa las mostrará como carrusel/galería
+#    - Si no quieres galería, borra todo el bloque "galeria_imagenes:"
+#
+# 8. Tips generales:
+#    - Usa descripciones claras y detalladas (1-3 párrafos)
+#    - Los colores HEX pueden buscarlos en: google.com/search?q=color+picker
+#    - Los iconos pueden copiarse de: emojipedia.org
+#    - Guarda frecuentemente mientras editas
+#
+# ═══════════════════════════════════════════════════════════════════════════════
+# CÓMO USAR ESTE ARCHIVO:
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# 1. Edita este archivo en tu editor de texto favorito
+# 2. Guarda los cambios
+# 3. Entrega el archivo a Rax para que lo integre al programa
+# 4. El programa leerá automáticamente todos los proyectos definidos aquí
+#
+# ═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,8 @@
+name: amerike_server
+description: Servidor WebSocket para Amerike MBA 2026
+version: 1.0.0
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# No se necesitan dependencias externas - dart:io incluye WebSocket
